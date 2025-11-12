@@ -29,7 +29,7 @@ public class VIVA1Q2 {
             }
             
             if (itemPrice == 0 && subtotal == 0) {
-                System.out.println("At least one items needed to proceed. Please re-enter.");
+                System.out.println("At least one valid item needed to proceed. Please re-enter.");
                 continue;
             }
             subtotal += itemPrice;
@@ -134,6 +134,10 @@ public class VIVA1Q2 {
         
         if (hh != 0) {
             System.out.printf("%-30s RM %.2f \n", "Happy Hour Discount (5%): ", hh);
+        }
+        
+        if (wc != 0) {
+            System.out.printf("%-30s RM %.2f \n", "Weekend Combo Discount (5%): ", wc);
         }
         
         System.out.println("---------------------------------------");
