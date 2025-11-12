@@ -27,8 +27,13 @@ public class VIVA1Q2 {
                 System.out.println("Invalid amount. Price cannot be negative. Please re-enter.");
                 continue;
             }
+            
+            if (itemPrice == 0 && subtotal == 0) {
+                System.out.println("At least one items needed to proceed. Please re-enter.");
+                continue;
+            }
             subtotal += itemPrice;
-        } while (itemPrice != 0);
+        } while (itemPrice != 0 || subtotal == 0);
         
         if (subtotal <= 30) {
             rate = 0.06;
