@@ -49,6 +49,7 @@ public class VIVA1Q2 {
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
         
         boolean checkDay = false;
+        boolean checkWeekday = false;
         do {
             System.out.print("Enter day of week: ");
             day = input.next();
@@ -56,6 +57,9 @@ public class VIVA1Q2 {
             for (int i = 0; i < 7; i++) {
                 if (day.equalsIgnoreCase(days[i])) {
                     checkDay = true;
+                    if (i < 5) { 
+                        checkWeekday = true;
+                    }
                     break;
                 }
             } 
@@ -79,14 +83,7 @@ public class VIVA1Q2 {
                 System.out.println("Invalid hour. Please re-enter.");
             }
         } while (checkHour == false);
-                
-        boolean checkWeekday = false;
-        for (int i = 0; i < 5; i++) {
-            if (day.equalsIgnoreCase(days[i])) {
-                checkWeekday = true;
-            }
-        }
-        
+
         if (checkWeekday == true) {
             if (totalBeforeDiscount > 25) {
                 studentSaver = totalBeforeDiscount * 0.1;
