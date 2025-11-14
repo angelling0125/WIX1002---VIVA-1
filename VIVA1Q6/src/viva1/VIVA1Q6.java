@@ -16,7 +16,7 @@ public class VIVA1Q6 {
             cursed[1] = random.nextInt(10) + 1;
         }
         
-        System.out.println("cursed: " + cursed[0] + " " + cursed[1]);
+        //System.out.println("cursed: " + cursed[0] + " " + cursed[1]);
             
         int[] egg = new int[3];
         egg[0] = random.nextInt(10) + 1;
@@ -31,7 +31,7 @@ public class VIVA1Q6 {
             egg[2] = random.nextInt(10) + 1;
         }
         
-        System.out.println("eggs: " + egg[0] + " " + egg[1] + " " + egg[2]);
+        //System.out.println("eggs: " + egg[0] + " " + egg[1] + " " + egg[2]);
         
         System.out.println("Welcome to the Dragon Egg Quest!");
         System.out.println("There are 10 chests, 3 dragon eggs, and 2 cursed chests.");
@@ -82,8 +82,6 @@ public class VIVA1Q6 {
                 System.out.println("This chest is cursed! Beware!");
                 System.out.println("You found a dragon egg!");
                 eggFound++;
-//                attempt -= 2;
-//                System.out.println("Attempts left: " + attempt);
                 for (int i = 0; i < 3; i++) {
                     if (guess == egg[i]) {
                         eggRemain[i] = false;
@@ -93,8 +91,6 @@ public class VIVA1Q6 {
             else if (checkEgg) {
                 System.out.println("You found a dragon egg!");
                 eggFound++;
-//                attempt -= 1;
-//                System.out.println("Attempts left: " + attempt);
                 for (int i = 0; i < 3; i++) {
                     if (guess == egg[i]) {
                         eggRemain[i] = false;
