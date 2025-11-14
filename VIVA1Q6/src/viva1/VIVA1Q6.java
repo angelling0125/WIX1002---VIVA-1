@@ -51,16 +51,14 @@ public class VIVA1Q6 {
             System.out.print("\nGuess a chest (1-10): ");
             guess = input.nextInt();
             
-            while (guess < 1 || guess > 10) {
+            if (guess < 1 || guess > 10) {
                 System.out.println("Invalid! Please re-enter.");
-                System.out.print("\nGuess a chest (1-10): ");
-                guess = input.nextInt();
+                continue;
             }
             
-            while (guessed[guess - 1]) {
-                System.out.println("Repeated chess! Guess again. ");
-                System.out.print("\nGuess a chest (1-10): ");
-                guess = input.nextInt();
+            if (guessed[guess - 1]) {
+                System.out.println("Repeated chest! Guess again. ");
+                continue;
             }
             guessed[guess - 1] = true;
             
